@@ -1,0 +1,267 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Typography */
+    --font-family-body: 'Satoshi', Verdana, sans-serif;
+    --font-family-display: 'Domine', sans-serif;
+    
+    /* Brand Colors - Green Palette */
+    --brand-primary: 145 100% 25%;      /* #008037 */
+    --brand-1: 145 100% 96%;            /* light green tint */
+    --brand-2: 145 100% 91%;            /* lighter green */
+    --brand-3: 145 100% 83%;            /* light green */
+    --brand-4: 145 100% 70%;            /* mid-light green */
+    --brand-5: 145 100% 56%;            /* medium green */
+    --brand-6: 145 100% 48%;            /* bright green */
+    --brand-7: 145 100% 40%;            /* mid green */
+    --brand-8: 145 100% 31%;            /* darker green */
+    --brand-9: 145 100% 25%;            /* #008037 */
+    --brand-10: 145 100% 20%;           /* darkest green */
+    
+    /* Greys Palette */
+    --greys-1: 215 28% 11%;             /* #101828 */
+    --greys-2: 215 28% 17%;             /* #1d2939 */
+    --greys-3: 215 23% 27%;             /* #344054 */
+    --greys-4: 215 20% 35%;             /* #475467 */
+    --greys-5: 215 16% 47%;             /* #667085 */
+    --greys-6: 215 14% 65%;             /* #98a2b3 */
+    --greys-7: 215 16% 84%;             /* #d0d5dd */
+    --greys-8: 215 16% 91%;             /* #e4e7ec */
+    --greys-9: 215 20% 96%;             /* #f2f4f7 */
+    --greys-10: 215 20% 98%;            /* #f9fafb */
+    --greys-11: 215 20% 99%;            /* #fcfcfd */
+    
+    /* Core Colors */
+    --white: 0 0% 100%;
+    --black: 0 0% 0%;
+    
+    /* Spacing Scale */
+    --spacing-0: 0rem;
+    --spacing-1: 0.25rem;
+    --spacing-2: 0.5rem;
+    --spacing-3: 0.75rem;
+    --spacing-4: 1rem;
+    --spacing-5: 1.25rem;
+    --spacing-6: 1.5rem;
+    --spacing-7: 2rem;
+    --spacing-8: 2.5rem;
+    --spacing-9: 3rem;
+    --spacing-10: 4rem;
+    --spacing-11: 5rem;
+    --spacing-12: 6rem;
+    --spacing-13: 7rem;
+    --spacing-14: 8rem;
+    --spacing-15: 9rem;
+    --spacing-16: 10rem;
+    
+    /* Core Tokens */
+    --background: 0 0% 100%;
+    --foreground: 215 28% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 11%;
+
+    --primary: 145 100% 25%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 145 100% 35%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 215 20% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 145 100% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 16% 84%;
+    --input: 215 16% 84%;
+    --ring: 145 100% 25%;
+
+    --radius: 0.75rem;
+
+    /* Glassmorphism */
+    --glass-bg: 0 0% 100% / 0.7;
+    --glass-border: 0 0% 100% / 0.2;
+    --glass-shadow: 0 8px 32px 0 rgba(1, 97, 59, 0.15);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(145 100% 25%) 0%, hsl(145 100% 40%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(145 100% 96%) 100%);
+    --gradient-glass: linear-gradient(135deg, 
+      hsla(0, 0%, 100%, 0.9) 0%,
+      hsla(151, 100%, 96%, 0.8) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(1, 97, 59, 0.08);
+    --shadow-md: 0 4px 16px rgba(1, 97, 59, 0.12);
+    --shadow-lg: 0 8px 32px rgba(1, 97, 59, 0.15);
+    --shadow-glow: 0 0 40px rgba(0, 205, 106, 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 215 28% 11%;
+    --foreground: 215 20% 99%;
+
+    --card: 215 28% 17%;
+    --card-foreground: 215 20% 99%;
+
+    --popover: 215 28% 17%;
+    --popover-foreground: 215 20% 99%;
+
+    --primary: 145 100% 45%;
+    --primary-foreground: 215 28% 11%;
+
+    --secondary: 145 100% 35%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 215 23% 27%;
+    --muted-foreground: 215 14% 65%;
+
+    --accent: 145 100% 45%;
+    --accent-foreground: 215 28% 11%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 23% 27%;
+    --input: 215 23% 27%;
+    --ring: 145 100% 45%;
+    
+    --glass-bg: 215 28% 17% / 0.7;
+    --glass-border: 0 0% 100% / 0.1;
+    --glass-shadow: 0 8px 32px 0 rgba(0, 205, 106, 0.2);
+    
+    --gradient-glass: linear-gradient(135deg, 
+      hsla(215, 28%, 17%, 0.9) 0%,
+      hsla(157, 98%, 19%, 0.8) 100%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-family-body);
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-display);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* Glassmorphism Utilities */
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--glass-shadow);
+  }
+  
+  .glass-dark {
+    background: rgba(32, 35, 42, 0.7);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  /* Hover Effects */
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* Text Gradients */
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 0.8s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
