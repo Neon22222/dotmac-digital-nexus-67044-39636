@@ -102,7 +102,7 @@ const Support = () => {
                 <p className="text-sm text-muted-foreground mb-4">{channel.description}</p>
                 {channel.link.startsWith('http') ? (
                   <a href={channel.link} target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" className="w-full">
+                    <Button variant="outline" className={`w-full ${channel.title === 'WhatsApp Chat' ? 'hover:bg-primary hover:text-white transition-colors duration-300' : ''}`}>
                       {channel.action}
                     </Button>
                   </a>

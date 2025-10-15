@@ -175,7 +175,7 @@ const Home = () => {
 
           <div className="text-center mt-12">
             <Link to="/services">
-              <Button size="lg" variant="outline" className="text-lg">
+              <Button size="lg" variant="outline" className="text-lg hover:bg-primary hover:text-white transition-colors duration-300">
                 View All Services
               </Button>
             </Link>
@@ -283,7 +283,7 @@ const Home = () => {
                       rel="noopener noreferrer"
                       className="w-full sm:w-auto"
                     >
-                      <Button size="lg" variant="outline" className="text-lg px-10 py-7 w-full sm:w-auto hover-lift border-2">
+                      <Button size="lg" variant="outline" className="text-lg px-10 py-7 w-full sm:w-auto hover-lift border-2 hover:bg-primary hover:text-white transition-colors duration-300">
                         Chat on WhatsApp
                       </Button>
                     </a>

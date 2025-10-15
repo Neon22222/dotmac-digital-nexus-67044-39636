@@ -210,7 +210,7 @@ const Contact = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
-                  <Button variant="default" size="lg" className="w-full">
+                  <Button variant="default" size="lg" className="w-full hover:bg-primary/90 transition-colors duration-300">
                     Chat on WhatsApp
                   </Button>
                 </a>
