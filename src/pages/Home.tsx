@@ -87,13 +87,13 @@ const Home = () => {
             {/* Right Side - Map with Floating Cards */}
             <div className="relative hidden lg:block h-[500px]">
               {/* Nigeria Map with Dotted Effect */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-20">
+              <div className="absolute inset-0 flex items-center justify-center opacity-60">
                 <img 
                   src={nigeriaMap} 
                   alt="Nigeria Map" 
                   className="w-[120%] h-auto object-contain"
                   style={{
-                    filter: 'contrast(1.2) brightness(0.8)',
+                    filter: 'contrast(1.5) brightness(0.9)',
                     mixBlendMode: 'screen'
                   }}
                 />
@@ -235,11 +235,12 @@ const Home = () => {
       {/* Logo Carousel */}
       <LogoCarousel />
 
-      {/* CTA Section */}
+      {/* CTA & Newsletter Section */}
       <section className="py-24 relative overflow-hidden">
         {/* Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/10" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
         
         <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal direction="mask">
@@ -288,9 +289,9 @@ const Home = () => {
                     </a>
                   </div>
                   
-                  <div className="mt-10 pt-10 border-t border-border/50">
+                  <div className="mt-12 pt-12 border-t border-border/50">
                     <p className="text-sm text-muted-foreground mb-4">Trusted by 500+ organizations</p>
-                    <div className="flex flex-wrap justify-center gap-6 text-xs text-muted-foreground">
+                    <div className="flex flex-wrap justify-center gap-6 text-xs text-muted-foreground mb-10">
                       <div className="flex items-center gap-2">
                         <Shield className="h-4 w-4 text-primary" />
                         <span>ISO Certified</span>
@@ -304,6 +305,32 @@ const Home = () => {
                         <span>Government Approved</span>
                       </div>
                     </div>
+                    
+                    {/* Newsletter */}
+                    <div className="max-w-2xl mx-auto">
+                      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+                        <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                        Join Our Community
+                      </div>
+                      
+                      <h3 className="text-2xl md:text-3xl font-bold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                        Stay Updated
+                      </h3>
+                      <p className="text-muted-foreground mb-6">
+                        Subscribe to our newsletter for the latest insights on technology solutions and digital transformation.
+                      </p>
+                      
+                      <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                        <input
+                          type="email"
+                          placeholder="Enter your email"
+                          className="flex-1 px-6 py-3 rounded-lg border border-input bg-background/80 backdrop-blur-sm focus:ring-2 focus:ring-primary/20 transition-all"
+                        />
+                        <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 shadow-lg hover:shadow-xl transition-all">
+                          Subscribe
+                        </Button>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -311,44 +338,6 @@ const Home = () => {
           </ScrollReveal>
         </div>
       </section>
-
-      {/* Newsletter Section */}
-      <ScrollReveal>
-        <section className="py-24 relative overflow-hidden">
-          {/* Background Effects */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/10" />
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
-          
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-2xl mx-auto text-center">
-              {/* Decorative Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 animate-pulse-slow">
-                <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-                Join Our Community
-              </div>
-              
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Stay Updated
-              </h2>
-              <p className="text-muted-foreground mb-8 text-lg">
-                Subscribe to our newsletter for the latest insights on technology solutions and digital transformation.
-              </p>
-              
-              <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-6 py-3 rounded-lg border border-input bg-background/80 backdrop-blur-sm focus:ring-2 focus:ring-primary/20 transition-all"
-                />
-                <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
-                  Subscribe
-                </Button>
-              </form>
-            </div>
-          </div>
-        </section>
-      </ScrollReveal>
     </div>
   );
 };

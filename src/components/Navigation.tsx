@@ -34,7 +34,7 @@ const Navigation = () => {
               <Link key={item.path} to={item.path}>
                 <Button
                   variant={isActive(item.path) ? "default" : "ghost"}
-                  className="font-medium"
+                  className={`font-medium ${!isActive(item.path) ? 'hover:bg-primary/10 hover:text-primary' : ''}`}
                 >
                   {item.name}
                 </Button>
@@ -72,7 +72,7 @@ const Navigation = () => {
               >
                 <Button
                   variant={isActive(item.path) ? "default" : "ghost"}
-                  className="w-full justify-start font-medium"
+                  className={`w-full justify-start font-medium ${!isActive(item.path) ? 'hover:bg-primary/10 hover:text-primary' : ''}`}
                 >
                   {item.name}
                 </Button>

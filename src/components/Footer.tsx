@@ -26,32 +26,6 @@ const Footer = () => {
 
   return (
     <>
-      {/* Newsletter Section */}
-      <section className="relative bg-background pb-0 -mb-1">
-        <div className="container mx-auto px-4 pb-32">
-          <div className="max-w-4xl mx-auto">
-            <div className="glass rounded-3xl p-8 md:p-12 text-center">
-              <h3 className="text-2xl md:text-3xl font-bold mb-3">Join our newsletter</h3>
-              <p className="text-muted-foreground mb-6">
-                We'll send you nice updates regularly. No spam.
-              </p>
-              <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                  required
-                />
-                <Button type="submit" size="lg" className="px-8">
-                  Subscribe
-                </Button>
-              </form>
-            </div>
-          </div>
-        </div>
-
-      </section>
-    
       <footer className="bg-background text-foreground relative border-t">
         <div className="container mx-auto px-4 pt-12 pb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
